@@ -11,10 +11,37 @@
 	<h1>Primeira Página JSF</h1>
 
 	<h:form>
-		<h:outputText value="Nome" />
-		<h:inputText />
+		<h:panelGrid columns="2">
+			<h:outputText value="Nome" />
+			<h:inputText />
 
-		<h:commandButton value="Enviar" />
+			<h:outputText value="Btn" />
+			<h:commandButton value="Enviar" />
+
+			<h:outputText value="Pwd" />
+			<h:inputSecret />
+
+			<h:outputText value="checkbox" />
+			<h:selectManyCheckbox>
+				<f:selectItem itemLabel="Java 8" itemValue="Java8" />
+				<f:selectItem itemLabel="Java 9" itemValue="Java9" />
+			</h:selectManyCheckbox>
+
+			<h:outputText value="checkbox" />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Java 8" itemValue="Java8" />
+				<f:selectItem itemLabel="Java 9" itemValue="Java9" />
+			</h:selectOneMenu>
+
+			<h:outputText value="radio" />
+			<h:selectOneRadio>
+				<f:selectItem itemLabel="Java 8" itemValue="Java8" />
+				<f:selectItem itemLabel="Java 9" itemValue="Java9" />
+			</h:selectOneRadio>
+			
+			<h:inputTextarea/>
+
+		</h:panelGrid>
 	</h:form>
 </h:body>
 </html>
