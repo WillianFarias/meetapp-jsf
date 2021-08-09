@@ -8,29 +8,32 @@
 	<title>Meetapp</title>
 </h:head>
 <h:body>
-<h2>Cadastrar Evento</h2>
+	<h2>Cadastrar Evento</h2>
 	<h:form>
 		<h:panelGrid columns="2">
 			<h:outputText value="Nome do Evento:" />
-			<h:inputText value="#{eventoBean.evento.nome}"/>
+			<h:inputText value="#{eventoBean.evento.nome}" />
 
 			<h:outputText value="Nome da Organização:" />
-			<h:inputText />
+			<h:inputText value="#{eventoBean.evento.organizacao}" />
 
 			<h:outputText value="Local:" />
-			<h:inputText />
+			<h:inputText value="#{eventoBean.evento.local}"/>
 
 			<h:outputText value="Data:" />
-			<h:inputText />
+			<h:inputText value="#{eventoBean.evento.data}"/>
 
 			<h:outputText value="Horário:" />
-			<h:inputText />
-			
-			<h:commandButton value="Cadastrar" action="#{eventoBean.adicionarEvento}"/>
+			<h:inputText value="#{eventoBean.evento.horario}"/> -->
+
+			<h:commandButton value="Cadastrar"
+				action="#{eventoBean.adicionarEvento}" />
 		</h:panelGrid>
 	</h:form>
-	
-	<h:dataTable value="#{eventoBean.eventos}" var="e">
+
+	<h2>Eventos Cadastrados</h2>
+
+	<h:dataTable value="#{eventoBean.eventos}" var="e" border="1">
 		<h:column>#{e.nome}</h:column>
 		<h:column>#{e.organizacao}</h:column>
 		<h:column>#{e.local}</h:column>
